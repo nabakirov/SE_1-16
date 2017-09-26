@@ -1,0 +1,23 @@
+C:\Users\Student\Documents\Visual Studio 2015\Projects\SE_1-16\cacl\cacl\bin\Debug\cacl.exe.config
+C:\Users\Student\Documents\Visual Studio 2015\Projects\SE_1-16\cacl\cacl\bin\Debug\cacl.exe
+C:\Users\Student\Documents\Visual Studio 2015\Projects\SE_1-16\cacl\cacl\bin\Debug\cacl.pdb
+C:\Users\Student\Documents\Visual Studio 2015\Projects\SE_1-16\cacl\cacl\bin\Debug\cacl.xml
+C:\Users\Student\Documents\Visual Studio 2015\Projects\SE_1-16\cacl\cacl\obj\Debug\cacl.vbprojResolveAssemblyReference.cache
+C:\Users\Student\Documents\Visual Studio 2015\Projects\SE_1-16\cacl\cacl\obj\Debug\cacl.Form1.resources
+C:\Users\Student\Documents\Visual Studio 2015\Projects\SE_1-16\cacl\cacl\obj\Debug\cacl.Resources.resources
+C:\Users\Student\Documents\Visual Studio 2015\Projects\SE_1-16\cacl\cacl\obj\Debug\cacl.vbproj.GenerateResource.Cache
+C:\Users\Student\Documents\Visual Studio 2015\Projects\SE_1-16\cacl\cacl\obj\Debug\cacl.exe
+C:\Users\Student\Documents\Visual Studio 2015\Projects\SE_1-16\cacl\cacl\obj\Debug\cacl.xml
+C:\Users\Student\Documents\Visual Studio 2015\Projects\SE_1-16\cacl\cacl\obj\Debug\cacl.pdb
+C:\WORK\KSTU\средство визуальной разработки приложений\1lab\cacl\cacl\bin\Debug\cacl.exe.config
+C:\WORK\KSTU\средство визуальной разработки приложений\1lab\cacl\cacl\bin\Debug\cacl.exe
+C:\WORK\KSTU\средство визуальной разработки приложений\1lab\cacl\cacl\bin\Debug\cacl.pdb
+C:\WORK\KSTU\средство визуальной разработки приложений\1lab\cacl\cacl\bin\Debug\cacl.xml
+C:\WORK\KSTU\средство визуальной разработки приложений\1lab\cacl\cacl\obj\Debug\cacl.vbprojResolveAssemblyReference.cache
+C:\WORK\KSTU\средство визуальной разработки приложений\1lab\cacl\cacl\obj\Debug\cacl.Form1.resources
+C:\WORK\KSTU\средство визуальной разработки приложений\1lab\cacl\cacl\obj\Debug\cacl.Resources.resources
+C:\WORK\KSTU\средство визуальной разработки приложений\1lab\cacl\cacl\obj\Debug\cacl.vbproj.GenerateResource.Cache
+C:\WORK\KSTU\средство визуальной разработки приложений\1lab\cacl\cacl\obj\Debug\cacl.vbproj.CoreCompileInputs.cache
+C:\WORK\KSTU\средство визуальной разработки приложений\1lab\cacl\cacl\obj\Debug\cacl.exe
+C:\WORK\KSTU\средство визуальной разработки приложений\1lab\cacl\cacl\obj\Debug\cacl.xml
+C:\WORK\KSTU\средство визуальной разработки приложений\1lab\cacl\cacl\obj\Debug\cacl.pdb
