@@ -41,7 +41,7 @@ int second() {
 }
 
 int third(){
-	cout << "input 9 elements of 2 dimentional array: ";
+	cout << "input 9 elements of 2 dimentional array: " << endl;
 	float arr[3][3];
 	for(short i = 0; i < 3; i++){
 		for(short j = 0; j < 3; j++){
@@ -94,7 +94,7 @@ int fourth(){
 	}
 	float x;
 	for(short j = 0; j < length; j++){
-		for (short i = 1; i < length; i++){
+		for (short i = 0; i < length; i++){
 			if (arr[i - 1] > arr[i]){
 				x = arr[i - 1];
 				arr[i - 1] = arr[i];
