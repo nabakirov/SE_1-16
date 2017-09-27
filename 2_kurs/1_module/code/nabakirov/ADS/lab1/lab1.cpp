@@ -94,7 +94,7 @@ int fourth(){
 	}
 	float x;
 	for(short j = 0; j < length; j++){
-		for (short i = 0; i < length; i++){
+		for (short i = 1; i < length; i++){
 			if (arr[i - 1] > arr[i]){
 				x = arr[i - 1];
 				arr[i - 1] = arr[i];
@@ -107,7 +107,7 @@ int fourth(){
 	for(short i = 0; i < length; i++){
 		cout << arr[i] << " ";
 	}
-	
+	cout << endl;
 	delete [] arr;
 }
 
