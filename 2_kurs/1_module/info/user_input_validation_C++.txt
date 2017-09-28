@@ -1,0 +1,14 @@
+#include"iostream.h"
+ 
+int main() {
+    int n;
+    cout << "vvedite kolichestvo tochek (ot 2 do 5000) = ";
+    cin >> n;
+    if (cin.fail()) {
+    cin.clear();
+    cin.ignore(cin.rdbuf() -> in_avail());
+    cout << "Nepravilnii vvod - zapreshen vvod bykv";
+    getch();
+    return(0);
+    }
+}
