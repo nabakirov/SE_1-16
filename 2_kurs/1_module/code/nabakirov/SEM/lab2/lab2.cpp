@@ -79,13 +79,20 @@ int s_p(list *l, int p){
 	return empty;
 }
 
+void 
+
 void task1(){
 	list *l = new list;
 	l->last = empty;
 	for (int i = 0; i < N; i++){
 		l->arr[i] = empty;
 	}
-
+	int choose;
+	cout << "choose what to do:\n\t1- push element\n\t2- delete element\n\t3- search element by value\n\t4-search element by index\n";
+	cin >> choose;
+	switch (choose){
+		case 1: 
+	}
 	for(int i = 0; i < 30; i++){
 		int a;
 		a = insert(l, rand(), rand() %30);
