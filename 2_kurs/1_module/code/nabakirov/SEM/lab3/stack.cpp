@@ -34,7 +34,7 @@ void push() {
 	l->index = I;
 	l->next = Top;
 	Top = l;
-	
+
 	cout << "pushed element: " << l->element << endl;
 }
 void pop() {
@@ -54,8 +54,8 @@ void print() {
 		return;
 	}
 	List *l = Top;
-	for (int i = 0; i < I; i++) {
-		cout << "\tindex: " << l->index <<"\n\telement: " <<l->element <<"\n-----------\n";
+	for (int i = 0; i <= I; i++) {
+		cout << "\tindex: " << l->index << "\n\telement: " << l->element << "\n-----------\n";
 		l = l->next;
 	}
 	delete l;
@@ -67,11 +67,16 @@ void s_val() {
 	}
 	int val = getINT();
 	List *l = Top;
+	bool found = false;
 	for (int i = 0; i <= I; i++) {
 		if (l->element == val) {
 			cout << "index of found element: " << l->index << endl;
+			found = true;
 		}
 		l = l->next;
+	}
+	if (!found) {
+		cout << "element not found\n";
 	}
 	delete l;
 }
@@ -81,6 +86,9 @@ void s_ind() {
 		return;
 	}
 	int ind = getINT();
+	if (ind <0 || ind >I) {
+		cout << "index out of range " << I << endl;
+	}
 	List *l = Top;
 	for (int i = 0; i <= I; i++) {
 		if (l->index == ind) {
@@ -103,7 +111,7 @@ void del() {
 	}
 	Top = NULL;
 	I = -1;
-	
+	cout << "stack is empty!\n";
 }
 void size() {
 	if (I == -1) {
@@ -116,7 +124,7 @@ void size() {
 
 
 int main() {
-	
+
 	int k;
 	do {
 		cout << "\t1-push\n\t2-pop\n\t3-print\n\t4-search element by value\n\t5-search element by index\n\t6-delete stack\n\t7-size\n\t0-exit\n";

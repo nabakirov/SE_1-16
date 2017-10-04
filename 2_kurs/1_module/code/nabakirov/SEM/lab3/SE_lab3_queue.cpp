@@ -72,10 +72,12 @@ void del() {
 	if (found) {
 		l = Top;
 		int x, p;
+		
 		List *toDel;
 		p = l->element;
 		for (int i = 0; i <= I; i++) {
 			if (l->index == ind) {
+				
 				break;
 			}
 			x = l->next->element;
@@ -86,6 +88,7 @@ void del() {
 		I--;
 		toDel = Top;
 		Top = Top->next;
+		cout << "deleted element: " << p << endl;
 		delete toDel;
 	}
 	else {
@@ -116,13 +119,19 @@ void s_val() {
 	cout << "input value: ";
 	int val = getINT();
 	List *l = Top;
+	bool found = false;
 	for (int i = 0; i <= I; i++) {
 		if (l->element == val) {
 			cout << "index of found element: " << l->index << endl;
+			found = true;
 		}
 		l = l->next;
 	}
+	if (!found) {
+		cout << "element not found\n";
+	}
 	delete l;
+
 }
 void s_ind() {
 	if (I == -1) {
@@ -131,12 +140,21 @@ void s_ind() {
 	}
 	cout << "input index: ";
 	int ind = getINT();
+	if (ind < 0 || ind > I) {
+		cout << "index out of range " << I << endl;
+		return;
+	}
+	bool found = false;
 	List *l = Top;
 	for (int i = 0; i <= I; i++) {
 		if (l->index == ind) {
 			cout << "element of found index: " << l->element << endl;
+			found = true;
 		}
 		l = l->next;
+	}
+	if (!found) {
+		cout << "element not found\n";
 	}
 	delete l;
 }
@@ -164,6 +182,10 @@ void size() {
 }
 
 void pop() {
+	if (I == -1) {
+		cout << "list is empty!\n";
+		return;
+	}
 	List *l = Top;
 	int x, p;
 	List *toDel;
