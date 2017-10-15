@@ -4,6 +4,7 @@ using namespace std;
 struct List {
 	int element;
 	List *next;
+	int index;
 };
 
 List *Top = NULL;
@@ -20,22 +21,21 @@ int getINT() {
 		cin.clear();
 		cin.ignore(cin.rdbuf()->in_avail());
 		cin >> k;
-
 	} while (cin.fail());
 	return k;
 }
-
 void push() {
 	I++;
 	int el = getINT();
 	List *l = new List;
 	l->element = el;
+	l->index = I;
 	l->next = Top;
 	Top = l;
 	cout << "pushed element: " << l->element << endl;
 }
 void pop() {
-	if (I == -1) {
+	if (Top == NULL) {
 		cout << "stack is empty!\n";
 		return;
 	}
@@ -46,28 +46,28 @@ void pop() {
 	I--;
 }
 void print() {
-	if (I == -1) {
+	if (Top == NULL) {
 		cout << "stack is empty!\n";
 		return;
 	}
 	List *l = Top;
-	for (int i = I; i >= 0; i--) {
-		cout << "\tindex: " << i << "\n\telement: " << l->element << "\n-----------\n";
+	for (int i = 0; i <= I; i++) {
+		cout << "\tindex: " << l->index << "\n\telement: " << l->element << "\n-----------\n";
 		l = l->next;
 	}
 	delete l;
 }
 void s_val() {
-	if (I == -1) {
+	if (Top == NULL) {
 		cout << "stack is empty!\n";
 		return;
 	}
 	int val = getINT();
 	List *l = Top;
 	bool found = false;
-	for (int i = I; i >= 0; i--) {
+	for (int i = 0; i <= I; i++) {
 		if (l->element == val) {
-			cout << "index of found element: " << i << endl;
+			cout << "index of found element: " << l->index << endl;
 			found = true;
 		}
 		l = l->next;
@@ -78,7 +78,7 @@ void s_val() {
 	delete l;
 }
 void s_ind() {
-	if (I == -1) {
+	if (Top == NULL) {
 		cout << "stack is empty!\n";
 		return;
 	}
@@ -87,8 +87,8 @@ void s_ind() {
 		cout << "index out of range " << I << endl;
 	}
 	List *l = Top;
-	for (int i = I; i >= 0; i--) {
-		if (i == ind){
+	for (int i = 0; i <= I; i++) {
+		if (l->index == ind) {
 			cout << "element of found index: " << l->element << endl;
 		}
 		l = l->next;
@@ -97,7 +97,7 @@ void s_ind() {
 }
 
 void del() {
-	if (I == -1) {
+	if (Top == NULL) {
 		cout << "stack is empty!\n";
 		return;
 	}
@@ -111,22 +111,17 @@ void del() {
 	cout << "stack is empty!\n";
 }
 void size() {
-	if (I == -1) {
+	if (Top == NULL) {
 		cout << "stack is empty!\n";
 		return;
 	}
 	cout << "stack size: " << I + 1 << endl;
 }
-
-
-
 int main() {
-
 	int k;
 	do {
 		cout << "\t1-push\n\t2-pop\n\t3-print\n\t4-search element by value\n\t5-search element by index\n\t6-delete stack\n\t7-size\n\t0-exit\n";
 		k = getINT();
-
 		switch (k)
 		{
 		case 1:

@@ -21,11 +21,9 @@ int getINT() {
 		cin.clear();
 		cin.ignore(cin.rdbuf()->in_avail());
 		cin >> k;
-
 	} while (cin.fail());
 	return k;
 }
-
 void push() {
 	I++;
 	int el = getINT();
@@ -34,11 +32,10 @@ void push() {
 	l->index = I;
 	l->next = Top;
 	Top = l;
-
 	cout << "pushed element: " << l->element << endl;
 }
 void pop() {
-	if (I == -1) {
+	if (Top == NULL) {
 		cout << "stack is empty!\n";
 		return;
 	}
@@ -49,7 +46,7 @@ void pop() {
 	I--;
 }
 void print() {
-	if (I == -1) {
+	if (Top == NULL) {
 		cout << "stack is empty!\n";
 		return;
 	}
@@ -61,7 +58,7 @@ void print() {
 	delete l;
 }
 void s_val() {
-	if (I == -1) {
+	if (Top == NULL) {
 		cout << "stack is empty!\n";
 		return;
 	}
@@ -81,7 +78,7 @@ void s_val() {
 	delete l;
 }
 void s_ind() {
-	if (I == -1) {
+	if (Top == NULL) {
 		cout << "stack is empty!\n";
 		return;
 	}
@@ -100,7 +97,7 @@ void s_ind() {
 }
 
 void del() {
-	if (I == -1) {
+	if (Top == NULL) {
 		cout << "stack is empty!\n";
 		return;
 	}
@@ -114,22 +111,17 @@ void del() {
 	cout << "stack is empty!\n";
 }
 void size() {
-	if (I == -1) {
+	if (Top == NULL) {
 		cout << "stack is empty!\n";
 		return;
 	}
 	cout << "stack size: " << I + 1 << endl;
 }
-
-
-
 int main() {
-
 	int k;
 	do {
 		cout << "\t1-push\n\t2-pop\n\t3-print\n\t4-search element by value\n\t5-search element by index\n\t6-delete stack\n\t7-size\n\t0-exit\n";
 		k = getINT();
-
 		switch (k)
 		{
 		case 1:
