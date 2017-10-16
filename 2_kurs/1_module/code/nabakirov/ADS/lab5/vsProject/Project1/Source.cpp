@@ -1,14 +1,17 @@
 #include <iostream>
+#include <string>
 using namespace std;
 
-struct List {
+const string INIT = "queue is initialized\n";
+const string EMPTY = "queue is empty\n";
+
+struct Queue {
 	int element;
-	List *next;
+	Queue *next;
 };
-
-List *Top = NULL;
-int I = -1;
-
+Queue *last = NULL, *first = NULL;
+int temp = 0;
+int cnt = 0;
 
 int getINT() {
 	int k;
@@ -26,226 +29,174 @@ int getINT() {
 	return k;
 }
 
-void del_by_val() {
-	if (Top == NULL) {
-		cout << "stack is empty!\n";
-		return;
-	}
-	int val = getINT();
-	List *K = Top;
-	bool found = false;
-	while (K->next != NULL) {
-		if (K->next->element == val) {
-			List * del = K->next;
-			K->next = K->next->next;
-			I--;
-			cout << "deleted element: " << del->element << endl;
-			delete del;
-			found = true;
-			break;
-		}
-		K = K->next;
-	}
-	if (!found) {
-		if (K->element == val) {
-			List * del = K;
-			cout << "deleted element: " << del->element << endl;
-			K = NULL;
-			delete del;
-			I--;
-		}
-		else {
-			cout << "element not found" << endl;
-		}
-		
-	}
-}
 
-void del_by_ind() {
-	if (Top == NULL) {
-		cout << "stack is empty!\n";
-		return;
+int add(Queue *q, int element, Queue *q2 = new Queue) {
+	Queue *toAdd = new Queue;
+	if (last == NULL || first == NULL) {
+		toAdd->element = element;
+		toAdd->next = NULL;
+		last = toAdd;
+		first = toAdd;
+		cnt++;
+		return toAdd->element;
 	}
-	int ind = getINT();
-	if (ind <0 || ind >I) {
-		cout << "index out of range " << I << endl;
-	}
-	List *K = Top;
 	
-	int j = I;
-	if (ind == j) {
-		List * del = Top;
-		Top = Top->next;
-		cout << "deleted element: " << del->element;
+	toAdd->element = element;
+	toAdd->next = last->next;
+	last->next = toAdd;
+	last = toAdd;
+	cnt++;
+	return toAdd->element;
+	
+}
+
+int del(Queue *q) {
+	Queue *toDel = first;
+	first = first->next;
+	int deleted = toDel->element;
+	delete toDel;
+	cnt--;
+	return deleted;
+}
+
+void print(Queue *q) {
+	Queue *i = first;
+	cout << "\nqueue: ";
+	while (i != NULL) {
+		cout << i->element << " ";
+		i = i->next;
+	}
+	i = NULL;
+	delete i;
+	cout << endl;
+}
+
+Queue* search_val(int element) {
+	Queue*found = first;
+	while (found != NULL) {
+		if (found->element == element) {
+			return found;
+		}
+		temp++;
+		found = found->next;
+	}
+	found = NULL;
+	return found;
+}
+
+Queue *search_pos(int element) {
+	Queue* found = first;
+	while (found != NULL) {
+		if (temp == element) {
+			return found;
+		}
+		temp++;
+		found = found->next;
+	}
+	found = NULL;
+	return found;
+}
+
+void delAll() {
+	while (first != NULL) {
+		Queue* del = first;
+		first = first->next;
 		delete del;
-		I--;
-		return;
 	}
-	while (K->next != NULL) {
-		if (j == (ind + 1) && ind != 0) {
-			List * del = K->next;
-			K->next = K->next->next;
-			I--;
-			cout << "deleted element: " << del->element << endl;
-			delete del;
-			break;
-		}
-		K = K->next;
-		j--;
-	}
-
-	if (ind == 0) {
-		List * del = K;
-		cout << "deleted element: " << del->element << endl;
-		K = NULL;
-		delete del;
-		I--;
-	}
+	last = first;
+	cnt = 0;
 }
-
-void push() {
-	I++;
-	int el = getINT();
-	List *l = new List;
-	l->element = el;
-	l->next = Top;
-	Top = l;
-	cout << "pushed element: " << l->element << endl;
-}
-void pop() {
-	if (Top == NULL) {
-		cout << "stack is empty!\n";
-		return;
-	}
-	List *del = Top;
-	Top = Top->next;
-	cout << "deleted element: " << del->element << endl;
-	delete del;
-	I--;
-}
-void print() {
-	if (Top == NULL) {
-		cout << "stack is empty!\n";
-		return;
-	}
-	List *l = Top;
-	for (int i = I; i >= 0; i--) {
-		cout << "\tindex: " << i << "\n\telement: " << l->element << "\n-----------\n";
-		l = l->next;
-	}
-	delete l;
-}
-void s_val() {
-	if (Top == NULL) {
-		cout << "stack is empty!\n";
-		return;
-	}
-	int val = getINT();
-	List *l = Top;
-	bool found = false;
-	for (int i = I; i >= 0; i--) {
-		if (l->element == val) {
-			cout << "index of found element: " << i << endl;
-			found = true;
-		}
-		l = l->next;
-	}
-	if (!found) {
-		cout << "element not found\n";
-	}
-	delete l;
-}
-void s_ind() {
-	if (Top == NULL) {
-		cout << "stack is empty!\n";
-		return;
-	}
-	int ind = getINT();
-	if (ind <0 || ind >I) {
-		cout << "index out of range " << I << endl;
-	}
-	List *l = Top;
-	for (int i = I; i >= 0; i--) {
-		if (i == ind) {
-			cout << "element of found index: " << l->element << endl;
-		}
-		l = l->next;
-	}
-	delete l;
-}
-
-void del() {
-	if (Top == NULL) {
-		cout << "stack is empty!\n";
-		return;
-	}
-	for (int i = 0; i <= I; i++) {
-		List *l = Top;
-		Top = l->next;
-		delete l;
-	}
-	Top = NULL;
-	I = -1;
-	cout << "stack is empty!\n";
-}
-void size() {
-	if (Top == NULL) {
-		cout << "stack is empty!\n";
-		return;
-	}
-	cout << "stack size: " << I + 1 << endl;
-}
-
 
 
 int main() {
-
-	int k;
+	
+	int count = 0;
+	
+	int action;
 	do {
-		cout << "\t1-push\n\t2-pop\n\t3-print\n\t4-search element by value\n\t5-search element by index\n\t6-delete stack\n\t7-size\n\t8-delete by value\n\t9-delete by index\n\t0-exit\n";
-		k = getINT();
+		cout << "\t0 - exit\n";
+		cout << "\t1 - print\n";
+		cout << "\t2 - append\n";
+		cout << "\t3 - delete\n";
+		cout << "\t4 - search by value\n";
+		cout << "\t5 - search by position\n";
+		cout << "\t6 - delete queue\n";
+		cout << "\t7 - length of queue\n";
 
-		switch (k)
-		{
-		case 1:
-			push();
-			cout << endl;
-			break;
-		case 2:
-			pop();
-			cout << endl;
-			break;
-		case 3:
-			print();
-			cout << endl;
-			break;
-		case 4:
-			s_val();
-			cout << endl;
-			break;
-		case 5:
-			s_ind();
-			cout << endl;
-			break;
-		case 6:
-			del();
-			cout << endl;
-			break;
-		case 7:
-			size();
-			cout << endl;
-			break;
-		case 8:
-			del_by_val();
-			cout << endl;
-			break;
-		case 9:
-			del_by_ind();
-			cout << endl;
-			break;
-		default:
-			cout << "incorrect choise" << endl;
+		action = getINT();
+		if (action == 0) {
 			break;
 		}
-	} while (k != 0);
+		else if (action == 1) {
+			if (first == NULL) {
+				cout << EMPTY;
+			}
+			else {
+				print(first);
+			}
+		}
+		else if (action == 2) {
+			int element = getINT();
+			int t = add(last, element, first);
+			cout << t << endl;
+		}
+		else if (action == 3) {
+			if (first == NULL) {
+				cout << EMPTY;
+			}
+			else {
+				int deleted = del(first);
+				cout << "deleted element " << deleted << endl;
+
+			}
+		}
+		else if (action == 4) {
+			if (first == NULL) {
+				cout << EMPTY;
+			}
+			else {
+				int element = getINT();
+				Queue* found = search_val(element);
+				if (found == NULL) {
+					cout << "element not found\n";
+				}
+				else {
+					cout << "found element: " << found->element << " index: " << temp << endl;
+				}
+				temp = 0;
+			}
+		}
+		else if (action == 5) {
+			if (first == NULL) {
+				cout << EMPTY;
+			}
+			else {
+				int element = getINT();
+				if (element < cnt && element >= 0) {
+					Queue*found = search_pos(element);
+					if (found == NULL) {
+						cout << "element not found\n";
+					}
+					else {
+						cout << "found element: " << found->element << " index: " << temp << endl;
+					}
+					temp = 0;
+				}
+				else {
+					cout << "position out of range " << cnt - 1 << endl;
+				}
+			}
+		}
+		else if (action == 6) {
+			if (first != NULL) {
+				delAll();
+			}
+			cout << EMPTY;
+		}
+		else if (action == 7) {
+			cout << "length: " << cnt << endl;
+		}
+	} while (action != 0);
+	
+
 }
