@@ -1,0 +1,21 @@
+c:\users\админ\documents\visual studio 2015\Projects\WindowsApplication4\WindowsApplication4\bin\Debug\WindowsApplication4.exe.config
+C:\Users\Админ\Documents\Visual Studio 2015\Projects\WindowsApplication4\WindowsApplication4\bin\Debug\WindowsApplication4.exe
+C:\Users\Админ\Documents\Visual Studio 2015\Projects\WindowsApplication4\WindowsApplication4\bin\Debug\WindowsApplication4.pdb
+C:\Users\Админ\Documents\Visual Studio 2015\Projects\WindowsApplication4\WindowsApplication4\bin\Debug\WindowsApplication4.xml
+C:\Users\Админ\Documents\Visual Studio 2015\Projects\WindowsApplication4\WindowsApplication4\obj\Debug\WindowsApplication4.vbprojResolveAssemblyReference.cache
+C:\Users\Админ\Documents\Visual Studio 2015\Projects\WindowsApplication4\WindowsApplication4\obj\Debug\WindowsApplication4.Form1.resources
+C:\Users\Админ\Documents\Visual Studio 2015\Projects\WindowsApplication4\WindowsApplication4\obj\Debug\WindowsApplication4.Resources.resources
+C:\Users\Админ\Documents\Visual Studio 2015\Projects\WindowsApplication4\WindowsApplication4\obj\Debug\WindowsApplication4.vbproj.GenerateResource.Cache
+C:\Users\Админ\Documents\Visual Studio 2015\Projects\WindowsApplication4\WindowsApplication4\obj\Debug\WindowsApplication4.exe
+C:\Users\Админ\Documents\Visual Studio 2015\Projects\WindowsApplication4\WindowsApplication4\obj\Debug\WindowsApplication4.xml
+C:\Users\Админ\Documents\Visual Studio 2015\Projects\WindowsApplication4\WindowsApplication4\obj\Debug\WindowsApplication4.pdb
+C:\Users\Админ\Documents\Visual Studio 2015\Projects\WindowsApplication4\WindowsApplication4\obj\Debug\WindowsApplication4.Form2.resources
+F:\WindowsApplication4\WindowsApplication4\bin\Debug\WindowsApplication4.exe.config
+F:\WindowsApplication4\WindowsApplication4\obj\Debug\WindowsApplication4.exe
+F:\WindowsApplication4\WindowsApplication4\obj\Debug\WindowsApplication4.xml
+F:\WindowsApplication4\WindowsApplication4\obj\Debug\WindowsApplication4.pdb
+F:\WindowsApplication4\WindowsApplication4\obj\Debug\WindowsApplication4.vbprojResolveAssemblyReference.cache
+F:\WindowsApplication4\WindowsApplication4\obj\Debug\WindowsApplication4.Form1.resources
+F:\WindowsApplication4\WindowsApplication4\obj\Debug\WindowsApplication4.Form2.resources
+F:\WindowsApplication4\WindowsApplication4\obj\Debug\WindowsApplication4.Resources.resources
+F:\WindowsApplication4\WindowsApplication4\obj\Debug\WindowsApplication4.vbproj.GenerateResource.Cache

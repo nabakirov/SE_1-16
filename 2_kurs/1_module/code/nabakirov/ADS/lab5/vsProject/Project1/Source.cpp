@@ -30,7 +30,7 @@ int getINT() {
 }
 
 
-int add(Queue *q, int element, Queue *q2 = new Queue) {
+int add(Queue *o, Queue *k, int element) {
 	Queue *toAdd = new Queue;
 	if (last == NULL || first == NULL) {
 		toAdd->element = element;
@@ -50,7 +50,7 @@ int add(Queue *q, int element, Queue *q2 = new Queue) {
 	
 }
 
-int del(Queue *q) {
+int del(Queue *k) {
 	Queue *toDel = first;
 	first = first->next;
 	int deleted = toDel->element;
@@ -59,7 +59,7 @@ int del(Queue *q) {
 	return deleted;
 }
 
-void print(Queue *q) {
+void print(Queue *j) {
 	Queue *i = first;
 	cout << "\nqueue: ";
 	while (i != NULL) {
@@ -71,7 +71,7 @@ void print(Queue *q) {
 	cout << endl;
 }
 
-Queue* search_val(int element) {
+Queue* search_val(int element, Queue * k) {
 	Queue*found = first;
 	while (found != NULL) {
 		if (found->element == element) {
@@ -84,7 +84,7 @@ Queue* search_val(int element) {
 	return found;
 }
 
-Queue *search_pos(int element) {
+Queue *search_pos(int element, Queue * first) {
 	Queue* found = first;
 	while (found != NULL) {
 		if (temp == element) {
@@ -97,7 +97,7 @@ Queue *search_pos(int element) {
 	return found;
 }
 
-void delAll() {
+void delAll(Queue * n, Queue* l) {
 	while (first != NULL) {
 		Queue* del = first;
 		first = first->next;
@@ -137,7 +137,7 @@ int main() {
 		}
 		else if (action == 2) {
 			int element = getINT();
-			int t = add(last, element, first);
+			int t = add(first, last, element);
 			cout << t << endl;
 		}
 		else if (action == 3) {
@@ -156,7 +156,7 @@ int main() {
 			}
 			else {
 				int element = getINT();
-				Queue* found = search_val(element);
+				Queue* found = search_val(element, first);
 				if (found == NULL) {
 					cout << "element not found\n";
 				}
@@ -173,7 +173,7 @@ int main() {
 			else {
 				int element = getINT();
 				if (element < cnt && element >= 0) {
-					Queue*found = search_pos(element);
+					Queue*found = search_pos(element, first);
 					if (found == NULL) {
 						cout << "element not found\n";
 					}
@@ -189,7 +189,7 @@ int main() {
 		}
 		else if (action == 6) {
 			if (first != NULL) {
-				delAll();
+				delAll(first, last);
 			}
 			cout << EMPTY;
 		}
@@ -198,5 +198,5 @@ int main() {
 		}
 	} while (action != 0);
 	
-
+	return 0;
 }

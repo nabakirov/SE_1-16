@@ -1,0 +1,12 @@
+C:\WORK\group_data\SE_1-16\2_kurs\1_module\code\nabakirov\vb\6lab\lab6\bin\Release\lab6.exe.config
+C:\WORK\group_data\SE_1-16\2_kurs\1_module\code\nabakirov\vb\6lab\lab6\bin\Release\lab6.exe
+C:\WORK\group_data\SE_1-16\2_kurs\1_module\code\nabakirov\vb\6lab\lab6\bin\Release\lab6.pdb
+C:\WORK\group_data\SE_1-16\2_kurs\1_module\code\nabakirov\vb\6lab\lab6\bin\Release\lab6.xml
+C:\WORK\group_data\SE_1-16\2_kurs\1_module\code\nabakirov\vb\6lab\lab6\obj\Release\lab6.Form1.resources
+C:\WORK\group_data\SE_1-16\2_kurs\1_module\code\nabakirov\vb\6lab\lab6\obj\Release\lab6.Resources.resources
+C:\WORK\group_data\SE_1-16\2_kurs\1_module\code\nabakirov\vb\6lab\lab6\obj\Release\lab6.vbproj.GenerateResource.Cache
+C:\WORK\group_data\SE_1-16\2_kurs\1_module\code\nabakirov\vb\6lab\lab6\obj\Release\lab6.vbproj.CoreCompileInputs.cache
+C:\WORK\group_data\SE_1-16\2_kurs\1_module\code\nabakirov\vb\6lab\lab6\obj\Release\lab6.exe
+C:\WORK\group_data\SE_1-16\2_kurs\1_module\code\nabakirov\vb\6lab\lab6\obj\Release\lab6.xml
+C:\WORK\group_data\SE_1-16\2_kurs\1_module\code\nabakirov\vb\6lab\lab6\obj\Release\lab6.pdb
+C:\WORK\group_data\SE_1-16\2_kurs\1_module\code\nabakirov\vb\6lab\lab6\obj\Release\lab6.vbprojResolveAssemblyReference.cache
