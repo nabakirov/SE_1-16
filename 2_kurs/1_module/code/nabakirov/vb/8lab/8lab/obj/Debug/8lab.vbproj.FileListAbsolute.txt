@@ -1,0 +1,14 @@
+C:\WORK\group_data\SE_1-16\2_kurs\1_module\code\nabakirov\vb\8lab\8lab\bin\Debug\8lab.exe.config
+C:\WORK\group_data\SE_1-16\2_kurs\1_module\code\nabakirov\vb\8lab\8lab\bin\Debug\8lab.exe
+C:\WORK\group_data\SE_1-16\2_kurs\1_module\code\nabakirov\vb\8lab\8lab\bin\Debug\8lab.pdb
+C:\WORK\group_data\SE_1-16\2_kurs\1_module\code\nabakirov\vb\8lab\8lab\bin\Debug\8lab.xml
+C:\WORK\group_data\SE_1-16\2_kurs\1_module\code\nabakirov\vb\8lab\8lab\obj\Debug\8lab.vbprojResolveAssemblyReference.cache
+C:\WORK\group_data\SE_1-16\2_kurs\1_module\code\nabakirov\vb\8lab\8lab\obj\Debug\_8lab.Resources.resources
+C:\WORK\group_data\SE_1-16\2_kurs\1_module\code\nabakirov\vb\8lab\8lab\obj\Debug\_8lab.read.resources
+C:\WORK\group_data\SE_1-16\2_kurs\1_module\code\nabakirov\vb\8lab\8lab\obj\Debug\8lab.vbproj.GenerateResource.Cache
+C:\WORK\group_data\SE_1-16\2_kurs\1_module\code\nabakirov\vb\8lab\8lab\obj\Debug\8lab.vbproj.CoreCompileInputs.cache
+C:\WORK\group_data\SE_1-16\2_kurs\1_module\code\nabakirov\vb\8lab\8lab\obj\Debug\8lab.exe
+C:\WORK\group_data\SE_1-16\2_kurs\1_module\code\nabakirov\vb\8lab\8lab\obj\Debug\8lab.xml
+C:\WORK\group_data\SE_1-16\2_kurs\1_module\code\nabakirov\vb\8lab\8lab\obj\Debug\8lab.pdb
+C:\WORK\group_data\SE_1-16\2_kurs\1_module\code\nabakirov\vb\8lab\8lab\obj\Debug\_8lab.r.resources
+C:\WORK\group_data\SE_1-16\2_kurs\1_module\code\nabakirov\vb\8lab\8lab\obj\Debug\_8lab.write.resources
