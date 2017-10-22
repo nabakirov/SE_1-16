@@ -2,7 +2,7 @@
 #include <string>
 using namespace std;
 
-const string INIT = "queue is initialized\n";
+
 const string EMPTY = "queue is empty\n";
 
 struct Queue {
@@ -47,24 +47,47 @@ int add(Queue *&first, Queue *&last, int element) {
 	
 }
 
-int del(Queue *&first) {
+int del(Queue *&first, Queue*&last) {
 	Queue *toDel = first;
 	first = first->next;
+	if (last->next == toDel) {
+		last->next = first;
+	}
+	
 	int deleted = toDel->element;
 	delete toDel;
 	return deleted;
 }
 
-void print(Queue *first) {
+void print(Queue *first, Queue *last) {
+	if (first == NULL || last == NULL) {
+		cout << EMPTY;
+		return;
+	}
 	Queue *i = first;
-	cout << "\nqueue: ";
-	while (i != NULL) {
-		cout << i->element << " ";
-		i = i->next;
+	
+	if (last->next != first) {
+		cout << "\nqueue: ";
+		while (i != NULL) {
+			cout << i->element << " ";
+			i = i->next;
+		}
+	}
+	else {
+		cout << "\ncircled queue\n";
+		cout << "last->next = " << last->next << endl;
+		cout << "first = " << first << endl;
+		cout << "\nqueue: ";
+		do {
+			cout << i->element << " ";
+			i = i->next;
+		} while (i != first);
+		
 	}
 	i = NULL;
 	delete i;
 	cout << endl;
+	
 }
 
 Queue* search_val(Queue *&first, int element, int &temp) {
@@ -76,6 +99,9 @@ Queue* search_val(Queue *&first, int element, int &temp) {
 		}
 		temp++;
 		found = found->next;
+		if (found == first) {
+			break;
+		}
 	}
 	found = NULL;
 	return found;
@@ -90,12 +116,17 @@ Queue *search_pos(Queue *&first, int element, int &temp) {
 		}
 		temp++;
 		found = found->next;
+		if (found == first) {
+			break;
+		}
 	}
 	found = NULL;
 	return found;
 }
 
 void delAll(Queue *&first, Queue*&last) {
+	last->next = NULL;
+	Queue *p = first;
 	while (first != NULL) {
 		Queue* del = first;
 		first = first->next;
@@ -103,7 +134,6 @@ void delAll(Queue *&first, Queue*&last) {
 	}
 	last = first;
 }
-
 
 
 int work_queue(Queue *&first, Queue *&last) {
@@ -120,6 +150,8 @@ int work_queue(Queue *&first, Queue *&last) {
 		cout << "\t5 - search by position\n";
 		cout << "\t6 - delete queue\n";
 		cout << "\t7 - length of queue\n";
+		cout << "\t8 - circle it\n";
+		cout << "\t9 - uncircle it\n";
 
 		action = getINT();
 		if (action == 0) {
@@ -130,7 +162,7 @@ int work_queue(Queue *&first, Queue *&last) {
 				cout << EMPTY;
 			}
 			else {
-				print(first);
+				print(first, last);
 			}
 		}
 		else if (action == 2) {
@@ -143,7 +175,7 @@ int work_queue(Queue *&first, Queue *&last) {
 				cout << EMPTY;
 			}
 			else {
-				int deleted = del(first);
+				int deleted = del(first, last);
 				cout << "deleted element " << deleted << endl;
 
 			}
@@ -187,6 +219,7 @@ int work_queue(Queue *&first, Queue *&last) {
 		}
 		else if (action == 6) {
 			if (first != NULL) {
+				
 				delAll(first, last);
 			}
 			cout << EMPTY;
@@ -194,13 +227,48 @@ int work_queue(Queue *&first, Queue *&last) {
 		else if (action == 7) {
 			Queue *pv = first;
 			int count = 0;
+			
 			while (pv != NULL) {
 				count++;
 				pv = pv->next;	
+				if (pv == first) {
+					break;
+				}
 			}
 			cout << "length: " << count << endl;
 			pv = NULL;
 			delete pv;
+		}
+		else if (action == 8) {
+			if (last != NULL) {
+				if (last->next == NULL) {
+					last->next = first;
+					cout << "last->next = " << last->next << endl;
+					cout << "first = " << first << endl;
+				}
+				else {
+					cout << "queue is already circled\n";
+				}
+			}
+			else {
+				cout << EMPTY;
+			}
+			
+		}
+		else if (action == 9) {
+			if (last != NULL) {
+				if (last->next == NULL) {
+					cout << "queue is already uncircled\n";
+				}
+				else {
+					last->next = NULL;
+					cout << "last->next = " << last->next << endl;
+					cout << "first = " << first << endl;
+				}
+			}
+			else {
+				cout << EMPTY;
+			}
 		}
 	} while (action != 0);
 	
@@ -210,6 +278,10 @@ int work_queue(Queue *&first, Queue *&last) {
 void conc(Queue *&last1, Queue *&first2, Queue *&last2) {
 	if (last1 == NULL) {
 		cout << "pointed queue is empty!\nfill queue first\n";
+		return;
+	}
+	else if (first2 == NULL) {
+		cout << "selected queue is empty!\nfill queue first\n";
 		return;
 	}
 	last1->next = first2;

@@ -24,3 +24,15 @@ F:\WindowsApplication3\WindowsApplication3\obj\Debug\WindowsApplication3.vbprojR
 F:\WindowsApplication3\WindowsApplication3\obj\Debug\WindowsApplication3.Form1.resources
 F:\WindowsApplication3\WindowsApplication3\obj\Debug\WindowsApplication3.Resources.resources
 F:\WindowsApplication3\WindowsApplication3\obj\Debug\WindowsApplication3.vbproj.GenerateResource.Cache
+C:\WORK\group_data\SE_1-16\2_kurs\1_module\code\nabakirov\vb\7lab\WindowsApplication3\bin\Debug\WindowsApplication3.exe.config
+C:\WORK\group_data\SE_1-16\2_kurs\1_module\code\nabakirov\vb\7lab\WindowsApplication3\bin\Debug\WindowsApplication3.exe
+C:\WORK\group_data\SE_1-16\2_kurs\1_module\code\nabakirov\vb\7lab\WindowsApplication3\bin\Debug\WindowsApplication3.pdb
+C:\WORK\group_data\SE_1-16\2_kurs\1_module\code\nabakirov\vb\7lab\WindowsApplication3\bin\Debug\WindowsApplication3.xml
+C:\WORK\group_data\SE_1-16\2_kurs\1_module\code\nabakirov\vb\7lab\WindowsApplication3\obj\Debug\WindowsApplication3.vbprojResolveAssemblyReference.cache
+C:\WORK\group_data\SE_1-16\2_kurs\1_module\code\nabakirov\vb\7lab\WindowsApplication3\obj\Debug\WindowsApplication3.Form1.resources
+C:\WORK\group_data\SE_1-16\2_kurs\1_module\code\nabakirov\vb\7lab\WindowsApplication3\obj\Debug\WindowsApplication3.Resources.resources
+C:\WORK\group_data\SE_1-16\2_kurs\1_module\code\nabakirov\vb\7lab\WindowsApplication3\obj\Debug\WindowsApplication3.vbproj.GenerateResource.Cache
+C:\WORK\group_data\SE_1-16\2_kurs\1_module\code\nabakirov\vb\7lab\WindowsApplication3\obj\Debug\WindowsApplication3.vbproj.CoreCompileInputs.cache
+C:\WORK\group_data\SE_1-16\2_kurs\1_module\code\nabakirov\vb\7lab\WindowsApplication3\obj\Debug\WindowsApplication3.exe
+C:\WORK\group_data\SE_1-16\2_kurs\1_module\code\nabakirov\vb\7lab\WindowsApplication3\obj\Debug\WindowsApplication3.xml
+C:\WORK\group_data\SE_1-16\2_kurs\1_module\code\nabakirov\vb\7lab\WindowsApplication3\obj\Debug\WindowsApplication3.pdb

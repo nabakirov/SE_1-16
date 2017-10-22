@@ -12,21 +12,22 @@ struct Node {
 
 
 
-int getINT() {
-	int k;
-	int i = 0;
-	do {
-		if (i > 0) {
-			cout << "only integer!\n";
-		}
-		i++;
-		cin.clear();
-		cin.ignore(cin.rdbuf()->in_avail());
-		cin >> k;
 
-	} while (cin.fail());
-	return k;
-}
+ int getINT() {
+ 	int k;
+ 	int i = 0;
+ 	do {
+ 		if (i > 0) {
+ 			cout << "only integer!\n";
+ 		}
+ 		i++;
+ 		cin.clear();
+ 		cin.ignore(cin.rdbuf()->in_avail());
+ 		cin >> k;
+
+ 	} while (cin.fail());
+ 	return k;
+ }
 
 
 int add(Node *&first, int element) {
@@ -37,18 +38,21 @@ int add(Node *&first, int element) {
 		first = toAdd;
 		return toAdd->element;
 	}
-
-	toAdd->element = element;
+	toAdd->element = first->element;
 	toAdd->next = first->next;
+	first->element = element;
 	first->next = toAdd;
-	first = toAdd;
-	return toAdd->element;
+	/*toAdd->element = element;
+	toAdd->next = first;
+	first = toAdd;*/
+	return first->element;
 
 }
 
 int del(Node *&first) {
 	Node *toDel = first;
 	first = first->next;
+	
 	int deleted = toDel->element;
 	delete toDel;
 	return deleted;
@@ -104,90 +108,96 @@ void delAll(Node *&first) {
 
 
 
-int main() {
-	Node *first = NULL;
-	int temp = 0;
-
+void insertOptions(Node *&first){
+	int temp;
 	int action;
-	do {
-		cout << "\t0 - exit\n";
-		cout << "\t1 - print\n";
-		cout << "\t2 - insert after value\n";
-		cout << "\t3 - insert to index\n";
-		cout << "\t4 - delete by value\n";
-		cout << "\t5 - delete by index\n";
-		cout << "\t6 - search by value\n";
-		cout << "\t7 - search by position\n";
-		cout << "\t8 - delete list\n";
-		cout << "\t9 - length of list\n";
-
+	int element;
+	do{
+		cout << "\nINSERT\n";
+		cout << "\t0 - back\n";
+		cout << "\t1 - to back\n";
+		cout << "\t2 - to specific index\n";
+		cout << "\t3 - before specific value\n";
 		action = getINT();
-		//exit
-		if (action == 0) {
-			break;
-		}
-		//print
-		else if (action == 1) {
-			if (first == NULL) {
-				cout << EMPTY;
-			}
-			else {
-				print(first);
-			}
-		}
-		//insert after value
-		else if (action == 2) {
-			cout << "element: ";
-			int element = getINT();
-			cout << "value in list: ";
-			int value = getINT();
-			Node *f_value = search_val(first, value, temp);
-			if (f_value == NULL) {
-				cout << "value in list not found\n";
-				break;
-			}
-			else {
-				int t = add(f_value, element);
-				cout << "inserted element: " <<t << endl;
-			}
-			
-		}
-		//insert to index
-		else if (action == 3) {
-			cout << "element: ";
-			int element = getINT();
-			cout << "index: ";
-			int ind = getINT();
-			if (ind < 0) {
-				cout << "position must be positive " << endl;
-				break;
-			}
-			Node *f_value = search_pos(first, ind, temp);
-			if (f_value == NULL) {
-				int c;
-				
-				do {
-					cout << "index is bigger to last element's index\nWhould you like to insert to the last position?(1/0)\n";
-					c = getINT();
-					if (c == 0) {
-						break;
-					}
-					else if(c == 1) {
-						Node *el = search_pos(first, temp, temp);
-						int t = add(el, element);
-						cout << "inserted element: " << t << endl;
-						break;
-					}
-				} while (c != 1 || c != 0);
-			}
-			else {
-				int t = add(f_value, element);
-				cout << "inserted element: " << t << endl;
-			}
 
+		if(action == 0){
+			return;
 		}
-		//delete by value
-		else if (action == 4) {
+		else if(action == 1){
+			cout << "enter a element: ";
+			element = getINT();
+			int inserted = add(first, element);
+			cout << "inserted: " << inserted << endl;
+		}
+		else if(action == 2){
+			if(first != NULL){
+				cout << "enter index: ";
+				int ind = getINT();
+				if(ind >= 0){
+					Node *found = search_pos(first, ind, temp);
+					if (found != NULL){
+						cout << "enter a element: ";
+						element = getINT();
+						int inserted = add(found, element);
+						cout << "inserted: " << inserted << endl;
+					}
+					else{
+						cout << "index out of range\n";
+					}
+				}
+				else{
+					cout << "index out of range\n";
+				}
+			}
+			else{
+
+
+				cout << "list is empty, element will be inserted to 0 index \n";
+				cout << "enter a element: ";
+				element = getINT();
+				int inserted = add(first, element);
+				cout << "inserted: " << inserted << endl;
+			}
+		}
+		else if(action == 3){
+			if(first != NULL){
+				cout << "enter specific value: ";
+				int ind = getINT();
+
+				Node *found = search_val(first, ind, temp);
+				if (found != NULL){
+					cout << "enter a element: ";
+					element = getINT();
+					int inserted = add(found, element);
+					cout << "inserted: " << inserted << endl;
+				}
+				else{
+					cout << "value not found\n";
+				}
+
+
+			}
+			else{
+				cout << "list is empty, element will be inserted to 0 index \n";
+				cout << "enter a element: ";
+				element = getINT();
+				int inserted = add(first, element);
+				cout << "inserted: " << inserted << endl;
+			}
+		}
+	}while(action != 0);
+}
+
+void deleteOptions(Node *&first){
+	int action;
+	int temp;
+	do{
+		cout << "\t0 - back\n";
+		cout << "\t1 - delete by value\n";
+		cout << "\t2 - delete by index\n";
+		action = getINT();
+		if (action == 0){return;}
+		else if(action == 1){
 			if (first == NULL) {
 				cout << EMPTY;
 				break;
@@ -204,8 +214,7 @@ int main() {
 				cout << "deleted element: " << t << endl;
 			}
 		}
-		//delete by index
-		else if (action == 5) {
+		else if(action == 2){
 			if (first == NULL) {
 				cout << EMPTY;
 				break;
@@ -227,8 +236,99 @@ int main() {
 				cout << "position must be positive " << endl;
 			}
 		}
+
+	}while(action != 0);
+}
+
+int main() {
+	Node *first = NULL;
+	int temp = 0;
+
+	int action;
+	do {
+		cout << "\t0 - exit\n";
+		cout << "\t1 - print\n";
+		cout << "\t2 - insert..\n";
+		cout << "\t3 - delete..\n";
+		cout << "\t4 - search by value\n";
+		cout << "\t5 - search by position\n";
+		cout << "\t6 - delete list\n";
+		cout << "\t7 - length of list\n";
+
+		action = getINT();
+		//exit
+		if (action == 0) {
+			break;
+		}
+		//print
+		else if (action == 1) {
+			if (first == NULL) {
+				cout << EMPTY;
+			}
+			else {
+				print(first);
+			}
+		}
+		//insert options
+		else if (action == 2) {
+			insertOptions(first);
+		}
+
+		//delete options
+		else if(action == 3){
+			int s;
+			do {
+				cout << "\t0 - back\n";
+				cout << "\t1 - delete by value\n";
+				cout << "\t2 - delete by index\n";
+				s = getINT();
+				
+				if (s == 1) {
+					if (first == NULL) {
+						cout << EMPTY;
+						break;
+					}
+					cout << "element: ";
+					int element = getINT();
+					Node *f_value = search_val(first, element, temp);
+					if (f_value == NULL) {
+						cout << "value in list not found\n";
+						break;
+					}
+					else {
+						int t = del(f_value);
+						cout << "deleted element: " << t << endl;
+					}
+				}
+				else if (s == 2) {
+					if (first == NULL) {
+						cout << EMPTY;
+						break;
+					}
+					cout << "index: ";
+					int element = getINT();
+					if (element >= 0) {
+						Node *f_value = search_pos(first, element, temp);
+						if (f_value == NULL) {
+							cout << "value in list not found\n";
+							break;
+						}
+						else {
+							int t = del(f_value);
+							cout << "deleted element: " << t << endl;
+						}
+					}
+					else {
+						cout << "position must be positive " << endl;
+					}
+				}
+
+			} while (s != 0);
+		}
+
+
 		//search by value
-		else if (action == 6) {
+		else if (action == 4) {
 			if (first == NULL) {
 				cout << EMPTY;
 			}
@@ -245,7 +345,7 @@ int main() {
 			}
 		}
 		//search by position
-		else if (action == 7) {
+		else if (action == 5) {
 			if (first == NULL) {
 				cout << EMPTY;
 			}
@@ -267,14 +367,14 @@ int main() {
 			}
 		}
 		//delete list
-		else if (action == 8) {
+		else if (action == 6) {
 			if (first != NULL) {
 				delAll(first);
 			}
 			cout << EMPTY;
 		}
 		//length of list
-		else if (action == 9) {
+		else if (action == 7) {
 			Node *pv = first;
 			int count = 0;
 			while (pv != NULL) {
@@ -285,9 +385,10 @@ int main() {
 			pv = NULL;
 			delete pv;
 		}
+		else if (action == 9) {
+			int a = del(first);
+		}
 	} while (action != 0);
 
 	return 0;
 }
-
-
