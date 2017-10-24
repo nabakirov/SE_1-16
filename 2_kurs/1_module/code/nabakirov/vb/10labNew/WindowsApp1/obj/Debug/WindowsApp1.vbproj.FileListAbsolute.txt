@@ -1,0 +1,15 @@
+C:\WORK\group_data\SE_1-16\2_kurs\1_module\code\nabakirov\vb\10labNew\WindowsApp1\bin\Debug\books.accdb
+C:\WORK\group_data\SE_1-16\2_kurs\1_module\code\nabakirov\vb\10labNew\WindowsApp1\bin\Debug\WindowsApp1.exe.config
+C:\WORK\group_data\SE_1-16\2_kurs\1_module\code\nabakirov\vb\10labNew\WindowsApp1\bin\Debug\WindowsApp1.exe
+C:\WORK\group_data\SE_1-16\2_kurs\1_module\code\nabakirov\vb\10labNew\WindowsApp1\bin\Debug\WindowsApp1.pdb
+C:\WORK\group_data\SE_1-16\2_kurs\1_module\code\nabakirov\vb\10labNew\WindowsApp1\bin\Debug\WindowsApp1.xml
+C:\WORK\group_data\SE_1-16\2_kurs\1_module\code\nabakirov\vb\10labNew\WindowsApp1\obj\Debug\WindowsApp1.vbprojResolveAssemblyReference.cache
+C:\WORK\group_data\SE_1-16\2_kurs\1_module\code\nabakirov\vb\10labNew\WindowsApp1\obj\Debug\Interop.AccWizObjects.dll
+C:\WORK\group_data\SE_1-16\2_kurs\1_module\code\nabakirov\vb\10labNew\WindowsApp1\obj\Debug\WindowsApp1.vbproj.ResolveComReference.cache
+C:\WORK\group_data\SE_1-16\2_kurs\1_module\code\nabakirov\vb\10labNew\WindowsApp1\obj\Debug\WindowsApp1.Form1.resources
+C:\WORK\group_data\SE_1-16\2_kurs\1_module\code\nabakirov\vb\10labNew\WindowsApp1\obj\Debug\WindowsApp1.Resources.resources
+C:\WORK\group_data\SE_1-16\2_kurs\1_module\code\nabakirov\vb\10labNew\WindowsApp1\obj\Debug\WindowsApp1.vbproj.GenerateResource.Cache
+C:\WORK\group_data\SE_1-16\2_kurs\1_module\code\nabakirov\vb\10labNew\WindowsApp1\obj\Debug\WindowsApp1.vbproj.CoreCompileInputs.cache
+C:\WORK\group_data\SE_1-16\2_kurs\1_module\code\nabakirov\vb\10labNew\WindowsApp1\obj\Debug\WindowsApp1.exe
+C:\WORK\group_data\SE_1-16\2_kurs\1_module\code\nabakirov\vb\10labNew\WindowsApp1\obj\Debug\WindowsApp1.xml
+C:\WORK\group_data\SE_1-16\2_kurs\1_module\code\nabakirov\vb\10labNew\WindowsApp1\obj\Debug\WindowsApp1.pdb

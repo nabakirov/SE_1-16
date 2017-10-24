@@ -1,0 +1,14 @@
+C:\WORK\group_data\SE_1-16\2_kurs\1_module\code\nabakirov\vb\10lab\10lab\bin\Debug\10lab.exe.config
+C:\WORK\group_data\SE_1-16\2_kurs\1_module\code\nabakirov\vb\10lab\10lab\bin\Debug\10lab.exe
+C:\WORK\group_data\SE_1-16\2_kurs\1_module\code\nabakirov\vb\10lab\10lab\bin\Debug\10lab.pdb
+C:\WORK\group_data\SE_1-16\2_kurs\1_module\code\nabakirov\vb\10lab\10lab\bin\Debug\10lab.xml
+C:\WORK\group_data\SE_1-16\2_kurs\1_module\code\nabakirov\vb\10lab\10lab\obj\Debug\10lab.vbprojResolveAssemblyReference.cache
+C:\WORK\group_data\SE_1-16\2_kurs\1_module\code\nabakirov\vb\10lab\10lab\obj\Debug\Interop.AccWizObjects.dll
+C:\WORK\group_data\SE_1-16\2_kurs\1_module\code\nabakirov\vb\10lab\10lab\obj\Debug\10lab.vbproj.ResolveComReference.cache
+C:\WORK\group_data\SE_1-16\2_kurs\1_module\code\nabakirov\vb\10lab\10lab\obj\Debug\_10lab.Form1.resources
+C:\WORK\group_data\SE_1-16\2_kurs\1_module\code\nabakirov\vb\10lab\10lab\obj\Debug\_10lab.Resources.resources
+C:\WORK\group_data\SE_1-16\2_kurs\1_module\code\nabakirov\vb\10lab\10lab\obj\Debug\10lab.vbproj.GenerateResource.Cache
+C:\WORK\group_data\SE_1-16\2_kurs\1_module\code\nabakirov\vb\10lab\10lab\obj\Debug\10lab.vbproj.CoreCompileInputs.cache
+C:\WORK\group_data\SE_1-16\2_kurs\1_module\code\nabakirov\vb\10lab\10lab\obj\Debug\10lab.exe
+C:\WORK\group_data\SE_1-16\2_kurs\1_module\code\nabakirov\vb\10lab\10lab\obj\Debug\10lab.xml
+C:\WORK\group_data\SE_1-16\2_kurs\1_module\code\nabakirov\vb\10lab\10lab\obj\Debug\10lab.pdb
