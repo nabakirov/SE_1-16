@@ -142,7 +142,7 @@ void insertOptions(Node *&first){
 	do{
 		cout << "\nINSERT\n";
 		cout << "\t0 - back\n";
-		cout << "\t1 - to back\n";
+		cout << "\t1 - to first\n";
 		cout << "\t2 - to specific index\n";
 		cout << "\t3 - before specific value\n";
 		action = getINT();
