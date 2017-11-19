@@ -28,8 +28,7 @@ int getINT() {
 	return k;
 }
 
-
-int add(Queue *&first, Queue *&last, int element) {
+int add_right(Queue *&first, Queue *&last, int element) {
 	Queue *toAdd = new Queue;
 	if (last == NULL || first == NULL) {
 		toAdd->element = element;
@@ -44,16 +43,43 @@ int add(Queue *&first, Queue *&last, int element) {
 	last->next = toAdd;
 	last = toAdd;
 	return toAdd->element;
-	
 }
 
-int del(Queue *&first, Queue*&last) {
+int add_left(Queue *&first, Queue *&last, int element) {
+	Queue *toAdd = new Queue;
+	if (last == NULL || first == NULL) {
+		toAdd->element = element;
+		toAdd->next = NULL;
+		last = toAdd;
+		first = toAdd;
+		return toAdd->element;
+	}
+
+	toAdd->element = element;
+	toAdd->next = first;
+	first = toAdd;
+	return toAdd->element;
+}
+
+int del_left(Queue *&first, Queue*&last) {
 	Queue *toDel = first;
 	first = first->next;
 	if (last->next == toDel) {
 		last->next = first;
 	}
 	
+	int deleted = toDel->element;
+	delete toDel;
+	return deleted;
+}
+int del_right(Queue *&first, Queue*&last) {
+	Queue *toDel = first;
+	while (toDel->next != last) {
+		toDel = toDel->next;
+	}
+	toDel->next = last->next;
+	toDel = last;
+	last = toDel;
 	int deleted = toDel->element;
 	delete toDel;
 	return deleted;
@@ -166,19 +192,53 @@ int work_queue(Queue *&first, Queue *&last) {
 			}
 		}
 		else if (action == 2) {
-			int element = getINT();
-			int t = add(first, last, element);
-			cout << t << endl;
+			int k;
+			do {
+				cout << "0 - back\n";
+				cout << "1 - right\n";
+				cout << "2 - left\n";
+				k = getINT();
+				if (k == 1) {
+					int element = getINT();
+					int t = add_right(first, last, element);
+					cout << t << endl;
+				}
+				else if (k == 2) {
+					int element = getINT();
+					int t = add_left(first, last, element);
+					cout << t << endl;
+				}
+			} while (k != 0);
+			
 		}
 		else if (action == 3) {
-			if (first == NULL) {
-				cout << EMPTY;
-			}
-			else {
-				int deleted = del(first, last);
-				cout << "deleted element " << deleted << endl;
+			int k;
+			do {
+				cout << "0 - back\n";
+				cout << "1 - left\n";
+				cout << "2 - rigth\n";
+				k = getINT();
+				if (k == 1) {
+					if (first == NULL) {
+						cout << EMPTY;
+					}
+					else {
+						int deleted = del_left(first, last);
+						cout << "deleted element " << deleted << endl;
 
-			}
+					}
+				}
+				else if (k == 2) {
+					if (first == NULL) {
+						cout << EMPTY;
+					}
+					else {
+						int deleted = del_right(first, last);
+						cout << "deleted element " << deleted << endl;
+
+					}
+				}
+			} while (k != 0);
 		}
 		else if (action == 4) {
 			if (first == NULL) {
